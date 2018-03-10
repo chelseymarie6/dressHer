@@ -6,4 +6,4 @@
 
 [Women Who Code San Diego](https://www.womenwhocode.com/san-diego)
 
-[Built with reactstrap](https://reactstrap.github.io/)
+Built with [reactstrap](https://reactstrap.github.io/)
