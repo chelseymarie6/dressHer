@@ -14,7 +14,7 @@ class App extends Component {
     <Router className="router">
       <Switch>
 
-        <Route path="/main" component={Main} />
+        <Route path="/" component={Main} />
         <Route path="*" component={NoMatch} />
 
       </Switch>
