@@ -1,16 +1,41 @@
 {
   "name": "dressher",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
-  },
+  "version": "1.0.0",
+  "description": "[Women Who Code San Diego](https://www.womenwhocode.com/san-diego)",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "installDeps": "yarn install && cd client && yarn install && cd ..",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chelseymarie6/dressHer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chelseymarie6/dressHer/issues"
+  },
+  "homepage": "https://github.com/chelseymarie6/dressHer#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.13.3"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "basic-auth": "^2.0.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.20.1",
+    "pg": "^7.4.1",
+    "react-modal": "^3.1.11",
+    "request": "^2.83.0",
+    "sequelize": "^4.31.2",
+    "shortid": "^2.2.8"
   }
 }
