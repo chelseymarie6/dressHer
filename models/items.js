@@ -5,7 +5,10 @@ module.exports = function(sequelize, DataTypes) {
 			type:DataTypes.STRING,
 			allowNull: true
 		},
-		img:DataTypes.STRING,
+		img:{
+			DataTypes.STRING,
+			default:"https://screenshotlayer.com/images/assets/placeholder.png",
+		},			
 		color: DataTypes.STRING,
 		size:DataTypes.INTEGER,
 		condition:DataTypes.STRING,
