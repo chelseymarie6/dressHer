@@ -106,7 +106,7 @@ class Upload extends Component {
 					<Input type="email" name="email" id="userEmail" placeholder="name@example.com" />
 				</FormGroup>
 
-				<Button>Submit</Button>
+				<Button onClick={this.handleFormSubmit}>Submit</Button>
 			</Form>
 		);
 	}
