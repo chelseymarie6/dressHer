@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: true
 		},
 		img:{
-			DataTypes.STRING,
+			type:DataTypes.STRING,
 			default:"https://screenshotlayer.com/images/assets/placeholder.png",
 		},			
 		color: DataTypes.STRING,
