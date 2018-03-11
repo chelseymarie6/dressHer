@@ -4,45 +4,7 @@ import API from '../utils/API';
 
 
 class Upload extends Component {
-
-	render() {
-		state = {
-			title: "",
-			description: "",
-			img: "",
-			color: "",
-			condition: "",
-			type: "",
-			email: "",
-		};
-
-		handleInputChange = event => {
-			const { name, value } = event.target;
-			this.setState({
-				[name]: value
-			});
-		};
-
-		handleFormSubmit = event => {
-			event.preventDefault();
-			if (this.state.title && this.state.author) {
-				API.createItem({
-					title: this.state.title,
-					description: this.body.description,
-					img: this.state.img,
-					color: this.state.color,
-					size: this.state.size,
-					condition: this.state.condition,
-					type: this.state.type,
-					email: this.state.email
-				})
-
-					.catch(err => console.log(err));
-			}
-		};
-
-
-
+render(){
 		return (
 			<Form>
 				<FormGroup>
@@ -96,7 +58,7 @@ class Upload extends Component {
 					<Input type="select" name="select" id="itemType">
 						<option>Blazer</option>
 						<option>Dress</option>
-						<option>Pants</option> 
+						<option>Pants</option>
 						<option>Shoes</option>
 						<option>Skirt</option>
 					</Input>
@@ -106,7 +68,7 @@ class Upload extends Component {
 					<Input type="email" name="email" id="userEmail" placeholder="name@example.com" />
 				</FormGroup>
 
-				<Button onClick={this.handleFormSubmit}>Submit</Button>
+				<Button>Submit</Button>
 			</Form>
 		);
 	}
