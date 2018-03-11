@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row } from 'reactstrap';
 import Navigation from './Navigation';
-import Upload from './Upload';
+// import Upload from './Upload';
 import API from '../utils/API';
 import Cards from './Cards.js';
 import Welcome from './Welcome';
@@ -25,8 +25,6 @@ loadAll(){
 			 )
 		.catch(err => console.log(err));
 }
-
-
 
 
 
