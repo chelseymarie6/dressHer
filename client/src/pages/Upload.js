@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { Container, Row, Col } from 'reactstrap';
-import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Container, Row, Col, ButtonGroup, Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import API from '../utils/API';
 
+const wellStyles = { margin: '0 auto 20px' };
 
 class Upload extends React.Component {
   constructor(props) {
@@ -25,13 +24,15 @@ class Upload extends React.Component {
     return (
       <div>
 
-      <Container margin="auto">
+      <Container>
       	<Row>
       		<Col>
-			<Button color="default" onClick={this.toggle}>{this.props.buttonLabel}Add Item</Button>
-			</Col>
-		</Row>
-		</Container>
+						<div className="well" style={wellStyles}>
+    					<Button bsStyle="primary" size="lg" onClick={this.toggle} block>{this.props.buttonLabel}Add Item</Button>
+						</div>
+					</Col>
+				</Row>
+			</Container>
 
 	        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
 	          <ModalHeader toggle={this.toggle}>Add an Item</ModalHeader>
