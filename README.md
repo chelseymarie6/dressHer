@@ -6,7 +6,7 @@
 
 #### Our team won the Best Overall Hack award! We are so honored to be apart of such a great hackathon and are excited for the next one!
 
-![Screenshot](/client/src/images/HackWinners.PNG)
+![Screenshot](/client/src/images/winner.PNG)
 
 ### Landing Page
 ###### Users can scroll through images of clothing that is available for donation
