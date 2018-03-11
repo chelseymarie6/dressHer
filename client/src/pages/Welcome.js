@@ -1,7 +1,28 @@
 import React from 'react';
+import { Container, Row } from 'reactstrap';
 import { Jumbotron, Button } from 'reactstrap';
+import Upload from "./Upload";
+
 
 const Welcome = (props) => {
+
+	// constructor(props) {
+	//     super(props);
+	//     this.state = {
+	//       modal: false
+	//     }
+
+	//     this.toggle = this.toggle.bind(this);
+	//   }
+
+	  // toggle() {
+	  //   this.setState({
+	  //     modal: !this.state.modal
+	  //   });
+	  // }
+  
+
+
   return (
     <div>
       <Jumbotron body inverse style={{ backgroundColor: '#48AD8F', borderColor: '#fff' }}>
@@ -13,8 +34,16 @@ const Welcome = (props) => {
            <Button onClick={this.toggle}>Add Item</Button>
         </p>
       </Jumbotron>
+      <Container>
+		<Row>
+			<Upload />
+		</Row>
+	  </Container>
     </div>
+
   );
 };
 
+
 export default Welcome;
+

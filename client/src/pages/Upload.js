@@ -4,6 +4,7 @@ import API from '../utils/API';
 
 
 class Upload extends Component {
+
 render(){
 		return (
 			<Form>

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row } from 'reactstrap';
-
 import Upload from './Upload';
-
-
 import "./Main.css";
 import API from '../utils/API';
 import Cards from './Cards.js';
