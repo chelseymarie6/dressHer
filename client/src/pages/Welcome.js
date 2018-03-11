@@ -36,7 +36,7 @@ const Welcome = (props) => {
       </Jumbotron>
       <Container>
 		<Row>
-			<Upload />
+			{/* <Upload /> */}
 		</Row>
 	  </Container>
     </div>
