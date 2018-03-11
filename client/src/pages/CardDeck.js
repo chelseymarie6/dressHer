@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemCard from './Cards.js';
-// import data from the data route
+
 
 let Application = React.createClass({
   createItemCard: function (card) {
@@ -17,7 +17,7 @@ let Application = React.createClass({
         <div className="row">
           <div className="col-sm-12 text-center">
 
-            {this.createItemCard(data.card)}
+            {this.createItemCard(card)}
 
           </div>
         </div>

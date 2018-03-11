@@ -3,6 +3,8 @@ import { Container, Row } from 'reactstrap';
 import Navigation from './Navigation';
 import Upload from './Upload';
 import API from '../utils/API';
+import Cards from './Cards.js';
+
 
 
 class Main extends Component {
@@ -38,7 +40,7 @@ render() {
 
 			<Container>
 				<Row>
-					<Upload />
+					<Cards />
 				</Row>
 			</Container>
 
