@@ -4,6 +4,7 @@ import Navigation from './Navigation';
 import Upload from './Upload';
 import API from '../utils/API';
 import Cards from './Cards.js';
+import Welcome from './Welcome';
 
 
 
@@ -35,6 +36,12 @@ render() {
 			<Container>
 				<Row>
 					<Navigation />
+				</Row>
+			</Container>
+
+			<Container>
+				<Row>
+					<Welcome />
 				</Row>
 			</Container>
 
