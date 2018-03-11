@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Container, Row } from 'reactstrap';
 import Navigation from './Navigation';
 import Upload from './Upload';
+import Cards from './Cards';
+
+import "./Main.css";
 import API from '../utils/API';
 
 
@@ -24,9 +27,6 @@ loadAll(){
 }
 
 
-
-
-
 render() {
 	return (
 		<div>
@@ -38,7 +38,8 @@ render() {
 
 			<Container>
 				<Row>
-					<Upload />
+					<Cards />
+					{/* <Upload /> */}
 				</Row>
 			</Container>
 
