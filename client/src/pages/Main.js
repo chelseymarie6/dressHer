@@ -6,6 +6,9 @@ import Cards from './Cards';
 
 import "./Main.css";
 import API from '../utils/API';
+import Cards from './Cards.js';
+import Welcome from './Welcome';
+
 
 
 class Main extends Component {
@@ -38,8 +41,13 @@ render() {
 
 			<Container>
 				<Row>
+					<Welcome />
+				</Row>
+			</Container>
+
+			<Container>
+				<Row>
 					<Cards />
-					{/* <Upload /> */}
 				</Row>
 			</Container>
 
