@@ -1,78 +1,116 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import API from '../utils/API';
 
 
-class Upload extends Component {
+class Upload extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
 
-render(){
-		return (
-			<Form>
-				<FormGroup>
-					<Label for="exampleFile">Upload Photo</Label>
-					<Input type="file" name="file" id="itemPhoto" />
-					<FormText color="muted">
-						Upload your item photo.
-					</FormText>
-				</FormGroup>
-				<FormGroup>
-					<Label for="exampleText">Item Title</Label>
-					<Input type="textarea" name="text" id="itemTitle" />
-				</FormGroup>
+    this.toggle = this.toggle.bind(this);
+  }
 
-				<FormGroup>
-					<Label for="exampleText">Item Description</Label>
-					<Input type="textarea" name="text" id="itemDescription" />
-				</FormGroup>
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
 
-				<FormGroup>
-					<Label for="exampleSelect">Color</Label>
-					<Input type="select" name="select" id="itemColor">
-						<option>Blue</option>
-						<option>Black</option>
-						<option>Brown</option>
-						<option>Grey</option>
-						<option>White</option>
-						<option>Other</option>
-					</Input>
-				</FormGroup>
-				<FormGroup>
-					<Label for="exampleSelect">Size</Label>
-					<Input type="select" name="select" id="itemSize">
-						<option>X-Small</option>
-						<option>Small</option>
-						<option>Medium</option>
-						<option>Large</option>
-						<option>X-Large</option>
-					</Input>
-				</FormGroup>
-				<FormGroup>
-					<Label for="exampleSelect">Condition</Label>
-					<Input type="select" name="select" id="itemCondition">
-						<option>Gently Used</option>
-						<option>Almost New</option>
-						<option>Brand New</option>
-					</Input>
-				</FormGroup>
-				<FormGroup>
-					<Label for="exampleSelect">Type</Label>
-					<Input type="select" name="select" id="itemType">
-						<option>Blazer</option>
-						<option>Dress</option>
-						<option>Pants</option>
-						<option>Shoes</option>
-						<option>Skirt</option>
-					</Input>
-				</FormGroup>
-				<FormGroup>
-					<Label for="exampleEmail">Email</Label>
-					<Input type="email" name="email" id="userEmail" placeholder="name@example.com" />
-				</FormGroup>
+  render() {
+    return (
+      <div>
 
-				<Button>Submit</Button>
-			</Form>
-		);
+      <Container margin="auto">
+      	<Row>
+      		<Col>
+			<Button color="default" onClick={this.toggle}>{this.props.buttonLabel}Add Item</Button>
+			</Col>
+		</Row>
+		</Container>
+
+	        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+	          <ModalHeader toggle={this.toggle}>Add an Item</ModalHeader>
+	          <ModalBody>
+	            <Form>
+					<FormGroup>
+						<Label for="exampleFile">Upload Photo</Label>
+						<Input type="file" name="file" id="itemPhoto" />
+						<FormText color="muted">
+							Upload your item photo.
+						</FormText>
+					</FormGroup>
+					<FormGroup>
+						<Label for="exampleText">Item Title</Label>
+						<Input type="textarea" name="text" id="itemTitle" />
+					</FormGroup>
+
+					<FormGroup>
+						<Label for="exampleText">Item Description</Label>
+						<Input type="textarea" name="text" id="itemDescription" />
+					</FormGroup>
+
+					<FormGroup>
+						<Label for="exampleSelect">Color</Label>
+						<Input type="select" name="select" id="itemColor">
+							<option>Blue</option>
+							<option>Black</option>
+							<option>Brown</option>
+							<option>Grey</option>
+							<option>White</option>
+							<option>Other</option>
+						</Input>
+					</FormGroup>
+					<FormGroup>
+						<Label for="exampleSelect">Size</Label>
+						<Input type="select" name="select" id="itemSize">
+							<option>X-Small</option>
+							<option>Small</option>
+							<option>Medium</option>
+							<option>Large</option>
+							<option>X-Large</option>
+						</Input>
+					</FormGroup>
+					<FormGroup>
+						<Label for="exampleSelect">Condition</Label>
+						<Input type="select" name="select" id="itemCondition">
+							<option>Gently Used</option>
+							<option>Almost New</option>
+							<option>Brand New</option>
+						</Input>
+					</FormGroup>
+					<FormGroup>
+						<Label for="exampleSelect">Type</Label>
+						<Input type="select" name="select" id="itemType">
+							<option>Blazer</option>
+							<option>Dress</option>
+							<option>Pants</option>
+							<option>Shoes</option>
+							<option>Skirt</option>
+						</Input>
+					</FormGroup>
+
+					<FormGroup>
+						<Label for="exampleEmail">Email</Label>
+						<Input type="email" name="email" id="userEmail" placeholder="name@example.com" />
+					</FormGroup>
+
+					<Button>Submit</Button>
+				</Form>
+
+	          </ModalBody>
+	          <ModalFooter>
+	            <Button color="primary" onClick={this.toggle}>Submit</Button>{' '}
+	            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+	          </ModalFooter>
+	        </Modal>
+	      </div>
+	    );
+	  }
 	}
-}
 
 export default Upload;
