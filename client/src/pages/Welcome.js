@@ -6,22 +6,6 @@ import Upload from "./Upload";
 
 const Welcome = (props) => {
 
-	// constructor(props) {
-	//     super(props);
-	//     this.state = {
-	//       modal: false
-	//     }
-
-	//     this.toggle = this.toggle.bind(this);
-	//   }
-
-	  // toggle() {
-	  //   this.setState({
-	  //     modal: !this.state.modal
-	  //   });
-	  // }
-  
-
 
   return (
     <div>
@@ -31,12 +15,13 @@ const Welcome = (props) => {
         <hr className="my-2" />
         <p>Donate your new or gently worn clothing today!</p>
         <p className="lead">
-           <Button onClick={this.toggle}>Add Item</Button>
+
         </p>
       </Jumbotron>
       <Container>
 		<Row>
 			<Upload />
+			<br />
 		</Row>
 	  </Container>
     </div>
